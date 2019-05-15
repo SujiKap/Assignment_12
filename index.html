@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mission to Mars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        </div>
+        <div class="jumbotron text-center">
+            <h2>Latest Mars News</h2>
+            <!-- Mars Listings -->
+            <div class="row" id="Mars-listings">
+                <div class="col-md-12">
+                    <h4 class="heading">{{listings.news_title}}</h4>
+                    <small>{{listings.news_p}}</small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 thumbnail"><img src={{listings.featured_image_url}} /></div>
+                <div class="col-md-6">
+                    <h4 class="heading">{{listings.html_table | safe}}</h4>
+                </div>
+            </div>
+            <div class="row" id="Mars-listings">
+                <div class="col-md-12">
+                    <h4 class="heading">{{listings.tweet_text}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Thumbnails -->
+    <div class="container">
+        <!-- Hemispheres -->
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Mars Hemispheres</h1>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Image 1 -->
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img src="https://astrogeology.usgs.gov/cache/images/cfa62af2557222a02478f1fcd781d445_cerberus_enhanced.tif_full.jpg"
+                        alt="..." class="img-thumbnail" />
+                </div>
+            </div>
+            <!-- Img 2 -->
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img src="https://astrogeology.usgs.gov/cache/images/3cdd1cbf5e0813bba925c9030d13b62e_schiaparelli_enhanced.tif_full.jpg"
+                        alt="..." class="img-thumbnail" , />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Image 3 -->
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <img src="https://astrogeology.usgs.gov/cache/images/ae209b4e408bb6c3e67b6af38168cf28_syrtis_major_enhanced.tif_full.jpg"
+                        alt="..." class="img-thumbnail" , />
+                </div>
+            </div>
+            <!-- Image 4 -->
+            <div class="col-md-6 ">
+                <div class="thumbnail">
+                    <img src="https://astrogeology.usgs.gov/cache/images/7cf2da4bf549ed01c17f206327be4db7_valles_marineris_enhanced.tif_full.jpg"
+                        alt="..." class="img-thumbnail" , />
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
